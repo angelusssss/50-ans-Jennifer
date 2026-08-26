@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dossier N°50 — Suite de l'enquête</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top, #292929 0%, #111 45%, #050505 100%);
+      color: #222;
+      font-family: Georgia, "Times New Roman", serif;
+      padding: 25px 15px 50px;
+    }
+
+    .dossier {
+      max-width: 700px;
+      margin: auto;
+      background: #e9e3d4;
+      padding: 30px;
+      box-shadow:
+        0 0 40px rgba(0,0,0,0.8),
+        0 20px 50px rgba(0,0,0,0.6);
+      position: relative;
+    }
+
+    .dossier::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(0,0,0,0.2);
+      pointer-events: none;
+    }
+
+    .autorise {
+      text-align: center;
+      color: #1c7a3a;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      letter-spacing: 3px;
+      font-size: 29px;
+      margin: 5px 0;
+    }
+
+    .sous-titre {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: #666;
+    }
+
+    .tampon {
+      display: block;
+      width: max-content;
+      margin: 25px auto;
+      padding: 9px 15px;
+      border: 3px solid #9b1c1c;
+      color: #9b1c1c;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: 2px;
+      transform: rotate(-6deg);
+      opacity: 0.85;
+    }
+
+    .section {
+      margin-top: 35px;
+    }
+
+    .section h2 {
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      letter-spacing: 2px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 8px;
+    }
+
+    .texte {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .alerte {
+      border-left: 5px solid #9b1c1c;
+      background: rgba(155, 28, 28, 0.08);
+      padding: 15px;
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+
+    .infos {
+      display: grid;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .info {
+      background: rgba(0,0,0,0.05);
+      padding: 15px;
+      border-left: 4px solid #333;
+    }
+
+    .info strong {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .mission {
+      background: #202020;
+      color: #eee;
+      padding: 20px;
+      margin-top: 20px;
+      line-height: 1.7;
+    }
+
+    .mission h2 {
+      border-bottom: 1px solid #777;
+      padding-bottom: 10px;
+      color: white;
+    }
+
+    .dresscode {
+      text-align: center;
+      border: 2px dashed #555;
+      padding: 20px;
+      margin-top: 20px;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .fin {
+      text-align: center;
+      margin-top: 40px;
+      color: #9b1c1c;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .signature {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    @media (max-width: 500px) {
+
+      .dossier {
+        padding: 25px 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .texte {
+        font-size: 15px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <main class="dossier">
+
+    <div class="autorise">
+      🔓 ACCÈS AUTORISÉ
+    </div>
+
+    <h1>DOSSIER N°50</h1>
+
+    <div class="sous-titre">
+      SUITE DE L'ENQUÊTE
+    </div>
+
+    <div class="tampon">
+      CLASSÉ CONFIDENTIEL
+    </div>
+
+
+    <section class="section">
+
+      <h2>☠️ RAPPORT DES FAITS</h2>
+
+      <div class="texte">
+
+        <p>
+          Dans la nuit du <strong>23 novembre</strong>,
+          un terrible crime a eu lieu...
+        </p>
+
+        <p>
+          Jennifer, 49 ans, a été retrouvée
+          victime d'un coup de couteau dans le dos.
+        </p>
+
+        <div class="alerte">
+          ⚠️ <strong>ATTENTION :</strong><br>
+          Les circonstances exactes du crime
+          restent encore inconnues.
+        </div>
+
+        <p>
+          Après plusieurs heures d'investigation,
+          les enquêteurs ont identifié
+          <strong>trois suspects principaux.</strong>
+        </p>
+
+        <p>
+          Vous êtes désormais sur leurs traces.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>🔎 L'ENQUÊTE</h2>
+
+      <div class="texte">
+
+        <p>
+          Tout au long de la soirée, vous pourrez
+          interroger les suspects, résoudre des énigmes,
+          analyser les indices et tenter de reconstituer
+          les événements.
+        </p>
+
+        <p>
+          Votre objectif est simple :
+          <strong>révéler la vérité sur ce crime atroce</strong>
+          et découvrir ce qui s'est réellement passé.
+        </p>
+
+        <p>
+          Une seule question demeure...
+        </p>
+
+        <div class="alerte">
+          <strong>
+            QUI A TUÉ JENNIFER ?
+          </strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>📋 INFORMATIONS DE L'AFFAIRE</h2>
+
+      <div class="infos">
+
+        <div class="info">
+          <strong>📅 DATE / HEURE</strong>
+          28/11/2026 vers 19 h
+        </div>
+
+        <div class="info">
+          <strong>📍 SCÈNE DE CRIME</strong>
+          Salle des fêtes de Guerny,
+          Hameau de Gisancourt
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section mission">
+
+      <h2>🕵️ VOTRE MISSION</h2>
+
+      <p>
+        Résoudre l'enquête et identifier le coupable.
+      </p>
+
+      <p>
+        À la fin de la soirée, vos conclusions
+        seront confrontées à la vérité.
+      </p>
+
+      <p>
+        Une récompense attend peut-être
+        les meilleurs enquêteurs...
+      </p>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>👔 DRESS CODE</h2>
+
+      <div class="dresscode">
+
+        👮 Policier<br>
+        🕵️ Détective<br>
+        🔎 Enquêteur<br>
+        🕶️ Agent infiltré
+
+        <br><br>
+
+        Enfilez vos meilleurs habits
+        afin de mener à bien cette enquête.
+
+      </div>
+
+    </section>
+
+
+    <div class="fin">
+      🔎 L'ENQUÊTE COMMENCE À VOTRE ARRIVÉE 🔎
+    </div>
+
+    <div class="signature">
+      DOSSIER N°50 — DOCUMENT CONFIDENTIEL
+    </div>
+
+  </main>
+
+</body>
+</html>
