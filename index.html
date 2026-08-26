@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dossier N°50 — Accès restreint</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, #252525 0%, #111 45%, #050505 100%);
+      color: #e8e8e8;
+      font-family: Georgia, "Times New Roman", serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+    }
+
+    .dossier {
+      width: 100%;
+      max-width: 520px;
+      background: #e9e3d4;
+      color: #202020;
+      padding: 28px;
+      position: relative;
+      box-shadow:
+        0 0 40px rgba(0,0,0,0.8),
+        0 15px 40px rgba(0,0,0,0.6);
+      transform: rotate(-0.5deg);
+    }
+
+    .dossier::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(0,0,0,0.2);
+      pointer-events: none;
+    }
+
+    .police {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 4px;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 30px;
+      letter-spacing: 3px;
+      margin: 5px 0;
+    }
+
+    .numero {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 3px;
+      margin-bottom: 25px;
+    }
+
+    .tampon {
+      display: block;
+      width: max-content;
+      margin: 0 auto 25px;
+      padding: 9px 15px;
+      border: 3px solid #9b1c1c;
+      color: #9b1c1c;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: 2px;
+      transform: rotate(-7deg);
+      opacity: 0.85;
+    }
+
+    .ligne {
+      border-top: 1px solid #777;
+      margin: 20px 0;
+    }
+
+    .victime {
+      text-align: center;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    .victime strong {
+      display: block;
+      font-size: 25px;
+      margin-top: 7px;
+    }
+
+    .statut {
+      text-align: center;
+      margin-top: 8px;
+      color: #9b1c1c;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .avertissement {
+      text-align: center;
+      margin: 25px 0;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    label {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      background: #f4f0e6;
+      border: 1px solid #555;
+      font-size: 18px;
+      text-align: center;
+      letter-spacing: 5px;
+      outline: none;
+    }
+
+    input:focus {
+      border: 2px solid #9b1c1c;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 12px;
+      padding: 14px;
+      background: #202020;
+      color: white;
+      border: none;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #9b1c1c;
+    }
+
+    #erreur {
+      text-align: center;
+      color: #9b1c1c;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+      margin-top: 12px;
+      min-height: 18px;
+    }
+
+    .bas {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 11px;
+      color: #666;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="dossier">
+
+    <div class="police">
+      POLICE JUDICIAIRE
+    </div>
+
+    <h1>DOSSIER N°50</h1>
+
+    <div class="numero">
+      AFFAIRE CLASSÉE CONFIDENTIELLE
+    </div>
+
+    <div class="tampon">
+      ACCÈS RESTREINT
+    </div>
+
+    <div class="ligne"></div>
+
+    <div class="victime">
+      VICTIME
+      <strong>JENNIFER</strong>
+      49 ANS
+    </div>
+
+    <div class="statut">
+      ☠ STATUT : DÉCÉDÉE ☠
+    </div>
+
+    <div class="ligne"></div>
+
+    <div class="avertissement">
+      Dans la nuit du 23 novembre,<br>
+      un terrible crime a été commis...
+      <br><br>
+      Les circonstances de la disparition
+      de Jennifer restent encore mystérieuses.
+      <br><br>
+      <strong>Le dossier a été placé sous scellés.</strong>
+    </div>
+
+    <label for="motDePasse">
+      CODE D'ACCÈS AU DOSSIER
+    </label>
+
+    <input
+      type="password"
+      id="motDePasse"
+      placeholder="••••••••"
+      autocomplete="off"
+    >
+
+    <button onclick="verifier()">
+      🔓 OUVRIR LE DOSSIER
+    </button>
+
+    <div id="erreur"></div>
+
+    <div class="bas">
+      Toute personne accédant à ce dossier
+      est considérée comme membre de l'enquête.
+      <br><br>
+      DOCUMENT CONFIDENTIEL — NE PAS DIFFUSER
+    </div>
+
+  </main>
+
+  <script>
+    function verifier() {
+
+      const motDePasse =
+        document.getElementById("motDePasse").value;
+
+      
+
+      const bonMotDePasse = "JENNIFER";
+
+      if (motDePasse === bonMotDePasse) {
+
+        window.location.href = "suite.html";
+
+      } else {
+
+        document.getElementById("erreur").textContent =
+          "❌ CODE INCORRECT — ACCÈS REFUSÉ";
+
+      }
+    }
+
+    document
+      .getElementById("motDePasse")
+      .addEventListener("keypress", function(event) {
+
+        if (event.key === "Enter") {
+          verifier();
+        }
+
+      });
+  </script>
+
+</body>
+</html>
